@@ -1,0 +1,6 @@
+.parcel-cache
+.vscode
+dist/
+lib/
+node_modules/
+src/api.json

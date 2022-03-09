@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: sans-serif;
+        gap: 16px;
+        line-height: 1.9;
+      }
+      .section {
+        display: flex;
+        justify-content: space-around;
+      }
+      .card {
+        background-color: #f4f4f5;
+        border-radius: 2px;
+        height: fit-content;
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="card">
+        <p>Authentication: <b id="auth-status">Unauthenticated</b></p>
+        <form id="form">
+          <div>
+            <label id="username">Username/email</label>
+            <input name="username" value="">
+          </div>
+          <div>
+            <label id="password">Password</label>
+            <input name="password" type="password" value="">
+          </div>
+          <div>
+            <label id="account">Account Name</label>
+            <input name="account" value="">
+          </div>
+          <div>
+            <label id="server-url">Server URL</label>
+            <input
+              name="server-url"
+              value=""
+            >
+          </div>
+          <button id="auth">Authenticate</button>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

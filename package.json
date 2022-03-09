@@ -1,0 +1,69 @@
+{
+  "name": "@2600hz/kazoo-js-sdk",
+  "version": "0.0.1",
+  "description": "SDK to interact with Kazoo's API",
+  "source": "src/index.ts",
+  "main": "lib/main.js",
+  "types": "lib/types.d.ts",
+  "scripts": {
+    "start": "parcel watch",
+    "clean": "rm -rf ./lib ./dist ./src/api.json",
+    "schema": "node ./scripts/generate-api-json.js",
+    "build": "yarn run clean && yarn run schema && parcel build ./src/index.ts",
+    "example:browser": "yarn build && parcel serve ./examples/browser/index.html --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2600hz/kazoo-js-sdk.git"
+  },
+  "contributors": [
+    {
+      "name": "kazoo-js-sdk contributors",
+      "url": "https://github.com/2600hz/kazoo-js-sdk/graphs/contributors"
+    }
+  ],
+  "keywords": [
+    "kazoo",
+    "crossbar",
+    "rest",
+    "api",
+    "sdk",
+    "javascript"
+  ],
+  "author": "Engineering Team <engineering@2600hz.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/2600hz/kazoo-js-sdk/issues"
+  },
+  "homepage": "https://github.com/2600hz/kazoo-js-sdk#readme",
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^10.0.3",
+    "@swc/helpers": "^0.3.6",
+    "cross-fetch": "^3.1.5",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "rxjs": "^7.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.5",
+    "@parcel/packager-ts": "^2.0.1",
+    "@parcel/transformer-typescript-types": "^2.0.1",
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/lodash": "^4.14.178",
+    "@types/md5": "^2.3.2",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "openapi-types": "^10.0.0",
+    "parcel": "^2.0.1",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "typescript": "^4.6.2",
+    "upath": "^2.0.1",
+    "util": "^0.12.4"
+  }
+}
